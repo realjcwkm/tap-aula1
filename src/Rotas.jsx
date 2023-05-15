@@ -1,23 +1,21 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
-import Gallery from "./pages/Gallery";
-import Photos from "./pages/Photos";
-import Contact from "./pages/Contact";
-import PhotoId from "./pages/PhotoId";
+import Cliente from "./pages/Cliente";
+import Vendedor from "./pages/Vendedor";
+import Produto from "./pages/Produto";
+import Venda from "./pages/Venda";
 
 function Rotas() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />}>
-          <Route path="photos" element={<Photos />} />
-          <Route path="gallery" element={<Gallery />}>
-            <Route path="photo_id" element={<PhotoId />} />
-          </Route>
-          <Route path="contact" element={<Contact />} />
-        </Route>
-        
+          <Route path="clientes" element={<Cliente />} />
+          <Route path="vendedores" element={<Vendedor />} />
+          <Route path="produtos" element={<Produto />} />
+          <Route path="vendas" element={<Venda />} />
+        </Route>        
       </Routes>
     </Router>
   )
